@@ -16,6 +16,6 @@ Demonstrate readiness for QA Tester Internship roles
 Future Improvements
 --
 API Testing with Postman
-Automation Testing with Playwright
-CI/CD Testing Pipeline
-Performance Testing
+,Automation Testing with Playwright
+,CI/CD Testing Pipeline
+,Performance Testing
