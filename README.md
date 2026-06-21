@@ -16,18 +16,18 @@ Demonstrate readiness for QA Tester Internship roles
 
 Skills Demonstrated
 --
-Test Case Design
-Defect Reporting
-SQL
-Database Testing
-Requirement Analysis
-Documentation
-Quality Assurance Process
+- Test Case Design
+- Defect Reporting
+- SQL
+- Database Testing
+- Requirement Analysis
+- Documentation
+- Quality Assurance Process
 
 
 Future Improvements
 --
-API Testing with Postman
-Automation Testing with Playwright
-CI/CD Testing Pipeline
-Performance Testing
+- API Testing with Postman
+- Automation Testing with Playwright
+- CI/CD Testing Pipeline
+- Performance Testing
