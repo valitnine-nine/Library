@@ -4,7 +4,7 @@ This project demonstrates Software Quality Assurance (QA) activities performed o
 
 The system manages library operations such as user registration, book management, borrowing, returning, and fine calculation.
 
-Project Objectives
+##Project Objectives
 Practice Software Testing processes
 Design and execute test cases
 Create professional QA documentation
@@ -13,7 +13,7 @@ Report and track software defects
 Demonstrate readiness for QA Tester Internship roles
 
 
-Skills Demonstrated
+##Skills Demonstrated
 Test Case Design
 Defect Reporting
 SQL
@@ -23,7 +23,7 @@ Documentation
 Quality Assurance Process
 
 
-Future Improvements
+##Future Improvements
 API Testing with Postman
 Automation Testing with Playwright
 CI/CD Testing Pipeline
