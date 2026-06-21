@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Library Management System ER Diagram and Relationship Summary</title>
+  <desc id="desc">Entity relationship diagram for authors, books, members, and loans, plus relationship summary and cardinality rules.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d7dce5; stroke-width: 2; }
+      .entity { fill: #ffffff; stroke: #243447; stroke-width: 2.5; }
+      .entity-title { fill: #243447; }
+      .entity-title-text { fill: #ffffff; font: 700 24px Arial, sans-serif; letter-spacing: 0; }
+      .field { fill: #263238; font: 18px Arial, sans-serif; letter-spacing: 0; }
+      .key { fill: #0f766e; font: 700 18px Arial, sans-serif; letter-spacing: 0; }
+      .title { fill: #172033; font: 700 40px Arial, sans-serif; letter-spacing: 0; }
+      .subtitle { fill: #5d6979; font: 20px Arial, sans-serif; letter-spacing: 0; }
+      .section-title { fill: #172033; font: 700 26px Arial, sans-serif; letter-spacing: 0; }
+      .table-head { fill: #eef3f8; }
+      .table-line { stroke: #d7dce5; stroke-width: 1.5; }
+      .th { fill: #172033; font: 700 18px Arial, sans-serif; letter-spacing: 0; }
+      .td { fill: #263238; font: 17px Arial, sans-serif; letter-spacing: 0; }
+      .note { fill: #263238; font: 18px Arial, sans-serif; letter-spacing: 0; }
+      .rel { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .rel-label-bg { fill: #f7f8fb; }
+      .rel-label { fill: #1d4ed8; font: 700 17px Arial, sans-serif; letter-spacing: 0; }
+      .badge { fill: #e0f2fe; stroke: #7dd3fc; stroke-width: 1.5; }
+      .badge-text { fill: #075985; font: 700 16px Arial, sans-serif; letter-spacing: 0; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1100"/>
+
+  <text class="title" x="80" y="78">Library Management System</text>
+  <text class="subtitle" x="80" y="112">ER Diagram and Relationship Summary</text>
+
+  <rect class="panel" x="60" y="145" width="1480" height="585" rx="12"/>
+  <text class="section-title" x="90" y="194">ER Diagram</text>
+
+  <!-- AUTHORS -->
+  <rect class="entity" x="115" y="245" width="310" height="220" rx="8"/>
+  <rect class="entity-title" x="115" y="245" width="310" height="54" rx="8"/>
+  <path d="M115 291 H425 V299 H115 Z" fill="#243447"/>
+  <text class="entity-title-text" x="270" y="280" text-anchor="middle">AUTHORS</text>
+  <text class="field" x="145" y="332"><tspan class="key">PK</tspan> id : int</text>
+  <text class="field" x="145" y="367"><tspan class="key">UK</tspan> name : varchar</text>
+  <text class="field" x="145" y="402">bio : text</text>
+  <text class="field" x="145" y="437">created_at : timestamp</text>
+
+  <!-- BOOKS -->
+  <rect class="entity" x="650" y="210" width="360" height="315" rx="8"/>
+  <rect class="entity-title" x="650" y="210" width="360" height="54" rx="8"/>
+  <path d="M650 256 H1010 V264 H650 Z" fill="#243447"/>
+  <text class="entity-title-text" x="830" y="245" text-anchor="middle">BOOKS</text>
+  <text class="field" x="680" y="297"><tspan class="key">PK</tspan> id : int</text>
+  <text class="field" x="680" y="332"><tspan class="key">UK</tspan> isbn : varchar</text>
+  <text class="field" x="680" y="367">title : varchar</text>
+  <text class="field" x="680" y="402"><tspan class="key">FK</tspan> author_id : int</text>
+  <text class="field" x="680" y="437">category : varchar</text>
+  <text class="field" x="680" y="472">published_year : int</text>
+  <text class="field" x="680" y="507">status : varchar</text>
+
+  <!-- MEMBERS -->
+  <rect class="entity" x="115" y="500" width="310" height="245" rx="8"/>
+  <rect class="entity-title" x="115" y="500" width="310" height="54" rx="8"/>
+  <path d="M115 546 H425 V554 H115 Z" fill="#243447"/>
+  <text class="entity-title-text" x="270" y="535" text-anchor="middle">MEMBERS</text>
+  <text class="field" x="145" y="587"><tspan class="key">PK</tspan> id : int</text>
+  <text class="field" x="145" y="622">full_name : varchar</text>
+  <text class="field" x="145" y="657"><tspan class="key">UK</tspan> email : varchar</text>
+  <text class="field" x="145" y="692">phone : varchar</text>
+  <text class="field" x="145" y="727">status : varchar</text>
+
+  <!-- LOANS -->
+  <rect class="entity" x="1185" y="285" width="320" height="300" rx="8"/>
+  <rect class="entity-title" x="1185" y="285" width="320" height="54" rx="8"/>
+  <path d="M1185 331 H1505 V339 H1185 Z" fill="#243447"/>
+  <text class="entity-title-text" x="1345" y="320" text-anchor="middle">LOANS</text>
+  <text class="field" x="1215" y="372"><tspan class="key">PK</tspan> id : int</text>
+  <text class="field" x="1215" y="407"><tspan class="key">FK</tspan> book_id : int</text>
+  <text class="field" x="1215" y="442"><tspan class="key">FK</tspan> member_id : int</text>
+  <text class="field" x="1215" y="477">loaned_at : date</text>
+  <text class="field" x="1215" y="512">due_at : date</text>
+  <text class="field" x="1215" y="547">returned_at : date</text>
+  <text class="field" x="1215" y="582">fine_amount : decimal</text>
+
+  <!-- Relationships -->
+  <path class="rel" d="M425 355 C505 355, 560 355, 650 355"/>
+  <rect class="rel-label-bg" x="492" y="324" width="92" height="29" rx="6"/>
+  <text class="rel-label" x="538" y="345" text-anchor="middle">writes</text>
+  <rect class="badge" x="447" y="372" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="479" y="392" text-anchor="middle">1</text>
+  <rect class="badge" x="575" y="372" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="607" y="392" text-anchor="middle">many</text>
+
+  <path class="rel" d="M1010 410 C1080 410, 1115 410, 1185 410"/>
+  <rect class="rel-label-bg" x="1060" y="379" width="92" height="29" rx="6"/>
+  <text class="rel-label" x="1106" y="400" text-anchor="middle">loaned</text>
+  <rect class="badge" x="1032" y="427" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="1064" y="447" text-anchor="middle">1</text>
+  <rect class="badge" x="1115" y="427" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="1147" y="447" text-anchor="middle">many</text>
+
+  <path class="rel" d="M425 625 C690 625, 920 625, 1185 505"/>
+  <rect class="rel-label-bg" x="760" y="606" width="108" height="29" rx="6"/>
+  <text class="rel-label" x="814" y="627" text-anchor="middle">borrows</text>
+  <rect class="badge" x="455" y="640" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="487" y="660" text-anchor="middle">1</text>
+  <rect class="badge" x="1090" y="540" width="64" height="28" rx="14"/>
+  <text class="badge-text" x="1122" y="560" text-anchor="middle">many</text>
+
+  <!-- Summary panel -->
+  <rect class="panel" x="60" y="765" width="1480" height="275" rx="12"/>
+  <text class="section-title" x="90" y="815">Relationship Summary</text>
+
+  <rect class="table-head" x="90" y="845" width="1420" height="44" rx="6"/>
+  <line class="table-line" x1="395" y1="845" x2="395" y2="1010"/>
+  <line class="table-line" x1="640" y1="845" x2="640" y2="1010"/>
+  <line class="table-line" x1="90" y1="889" x2="1510" y2="889"/>
+  <line class="table-line" x1="90" y1="929" x2="1510" y2="929"/>
+  <line class="table-line" x1="90" y1="969" x2="1510" y2="969"/>
+  <rect x="90" y="845" width="1420" height="165" rx="6" fill="none" stroke="#d7dce5" stroke-width="1.5"/>
+
+  <text class="th" x="110" y="873">Relationship</text>
+  <text class="th" x="415" y="873">Type</text>
+  <text class="th" x="660" y="873">Description</text>
+
+  <text class="td" x="110" y="916">Authors to Books</text>
+  <text class="td" x="415" y="916">One-to-many</text>
+  <text class="td" x="660" y="916">One author can write many books. Each book has one author.</text>
+
+  <text class="td" x="110" y="956">Members to Loans</text>
+  <text class="td" x="415" y="956">One-to-many</text>
+  <text class="td" x="660" y="956">One member can have many historical loans. Each loan belongs to one member.</text>
+
+  <text class="td" x="110" y="996">Books to Loans</text>
+  <text class="td" x="415" y="996">One-to-many</text>
+  <text class="td" x="660" y="996">One book can appear in many historical loans. Only one active loan per book is allowed.</text>
+
+  <text class="section-title" x="90" y="1067">Cardinality Rules</text>
+  <text class="note" x="320" y="1067">Book requires author • Loan requires book and member • One active loan per book • Max 3 active loans per member</text>
+</svg>
